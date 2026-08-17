@@ -1,10 +1,12 @@
 #include <iostream>
 #include <sstream>
+#include <stdlib.h>
 #include "AVL.h"
 
 using namespace std;
 
 int main(){
+	system("clear");
 	AVL tree;
 	string numCommands;
 	getline(cin, numCommands);

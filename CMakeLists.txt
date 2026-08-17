@@ -22,6 +22,8 @@ include_directories(src)
 add_executable(Main
         src/main.cpp
         src/AVL.cpp
+        src/Menu.cpp
+        src/Menu.h
         # your main file
         # add your own header files below - should be automatically added in CLion
         # example (can also separate with newlines):

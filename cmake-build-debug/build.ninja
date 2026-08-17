@@ -63,6 +63,13 @@ build CMakeFiles/Main.dir/src/AVL.cpp.o: CXX_COMPILER__Main_unscanned_Debug /Use
   OBJECT_DIR = CMakeFiles/Main.dir
   OBJECT_FILE_DIR = CMakeFiles/Main.dir/src
 
+build CMakeFiles/Main.dir/src/Menu.cpp.o: CXX_COMPILER__Main_unscanned_Debug /Users/tfulwider6/Documents/School/Project1/src/Menu.cpp || cmake_object_order_depends_target_Main
+  DEP_FILE = CMakeFiles/Main.dir/src/Menu.cpp.o.d
+  FLAGS = -Wall -Werror -g -std=gnu++20 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.2.sdk -mmacosx-version-min=15.6 -fcolor-diagnostics
+  INCLUDES = -I/Users/tfulwider6/Documents/School/Project1/src
+  OBJECT_DIR = CMakeFiles/Main.dir
+  OBJECT_FILE_DIR = CMakeFiles/Main.dir/src
+
 
 # =============================================================================
 # Link build statements for EXECUTABLE target Main
@@ -71,7 +78,7 @@ build CMakeFiles/Main.dir/src/AVL.cpp.o: CXX_COMPILER__Main_unscanned_Debug /Use
 #############################################
 # Link the executable Main
 
-build Main: CXX_EXECUTABLE_LINKER__Main_Debug CMakeFiles/Main.dir/src/main.cpp.o CMakeFiles/Main.dir/src/AVL.cpp.o
+build Main: CXX_EXECUTABLE_LINKER__Main_Debug CMakeFiles/Main.dir/src/main.cpp.o CMakeFiles/Main.dir/src/AVL.cpp.o CMakeFiles/Main.dir/src/Menu.cpp.o
   FLAGS = -Wall -Werror -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.2.sdk -mmacosx-version-min=15.6
   OBJECT_DIR = CMakeFiles/Main.dir
   POST_BUILD = :
