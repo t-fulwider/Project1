@@ -1,1 +1,6 @@
+# build files
 build/
+
+# testing setup and files
+test-io/
+test/
