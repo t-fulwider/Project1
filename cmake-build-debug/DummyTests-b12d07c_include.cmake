@@ -1,0 +1,5 @@
+if(EXISTS "/Users/tfulwider6/Documents/School/Project1/cmake-build-debug/DummyTests-b12d07c_tests.cmake")
+  include("/Users/tfulwider6/Documents/School/Project1/cmake-build-debug/DummyTests-b12d07c_tests.cmake")
+else()
+  add_test(DummyTests_NOT_BUILT-b12d07c DummyTests_NOT_BUILT-b12d07c)
+endif()
