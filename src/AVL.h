@@ -95,4 +95,7 @@ public:
 
     // print the number of levels in tree if any, return that number for testing
     int PrintLevelCount();
+
+    string GetName();
+    string GetUFID();
 };

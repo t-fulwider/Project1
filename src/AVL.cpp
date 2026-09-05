@@ -234,12 +234,12 @@ bool AVL::Insert(const string& name, const string& ufid)
 	// add check to see if ufid already exists
 	if (!IsNameValid(name) || !IsUfidValid(ufid) || !SearchID(ufid).empty())
 	{
-		cout << "unsuccessful";
+		////cout << "unsuccessful";
 		return false;
 	}
 
 	_root = InsertHelper(_root, ufid, name);
-	cout << "successful";
+	////cout << "successful";
 	return true;
 }
 string AVL::SearchID(const string& ufid)
@@ -269,7 +269,7 @@ vector<string> AVL::SearchName(const string& name)
 	if (!IsNameValid(name))
 	{
 		// quick check for valid name
-		cout << "unsuccessful";
+		////cout << "unsuccessful";
 		return {};
 	}
 	// create two vectors, one for name, one for id's
@@ -283,14 +283,15 @@ vector<string> AVL::SearchName(const string& name)
 			result.push_back(idVec[i]);
 	}
 	if (result.empty())
-		cout << "unsuccessful";
-	else
+		//cout << "unsuccessful";
+		int x = 2+2;
+	/*else
 	{
 		// simple print loop
 		for (int i = 0; i < result.size() - 1; i++)
-			cout << result[i] << endl;
-		cout << result.back();
-	}
+			//cout << result[i] << endl;
+		//cout << result.back();
+	}*/
 	return result;
 }
 bool AVL::RemoveID(const string& ufid)
@@ -300,10 +301,10 @@ bool AVL::RemoveID(const string& ufid)
 	_root = RemoveIDHelper(_root, ufid, removed);
 	if (!removed)
 	{
-		cout << "unsuccessful";
+		//cout << "unsuccessful";
 		return false;
 	}
-	cout << "successful";
+	//cout << "successful";
 	return true;
 }
 bool AVL::RemoveInorder(int index)
@@ -313,7 +314,7 @@ bool AVL::RemoveInorder(int index)
 	// make sure index is in range
 	if (index < 0 || index >= inOrderVec.size())
 	{
-		cout << "unsuccessful";
+		//cout << "unsuccessful";
 		return false;
 	}
 	// remove the node at index
@@ -347,7 +348,7 @@ void AVL::PrintInorder()
 	for (int i = 0; i < printStr.size() - 1; i++)
 		cout << printStr[i] << ", ";
 	// avoid extra comma at end
-	cout << printStr.back();
+	//cout << printStr.back();
 }
 void AVL::PrintPreorder()
 {
@@ -358,7 +359,7 @@ void AVL::PrintPreorder()
 	for (int i = 0; i < printStr.size() - 1; i++)
 		cout << printStr[i] << ", ";
 	// avoid extra comma at end
-	cout << printStr.back();
+	//cout << printStr.back();
 }
 void AVL::PrintPostorder()
 {
@@ -369,17 +370,17 @@ void AVL::PrintPostorder()
 	for (int i = 0; i < printStr.size() - 1; i++)
 		cout << printStr[i] << ", ";
 	// avoid extra comma at end
-	cout << printStr.back();
+	//cout << printStr.back();
 }
 int AVL::PrintLevelCount()
 {
 	// if tree empty, level is 0
 	if (_root == nullptr)
 	{
-		cout << 0;
+		//cout << 0;
 		return 0;
 	}
 	// else, level count is the height of tree
-	cout << _root->_height;
+	//cout << _root->_height;
 	return _root->_height;
 }

@@ -23,6 +23,8 @@ add_executable(Main
         src/main.cpp
         src/AVL.cpp
         src/menu.cpp
+        src/user.cpp
+        src/user.h
         # your main file
         # add your own header files below - should be automatically added in CLion
         # example (can also separate with newlines):
