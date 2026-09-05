@@ -1,13 +1,23 @@
 #pragma once
+#include <vector>
+#include "user.h"
+#include "AVL.h"
 
 class Menu {
 private:
-	void static Loading();
-	void static Login();
-	void static ClearScreen();
-	void static Register();
-	void static About();
+	std::vector<User> _users;
+	AVL _students;
+
+	void  Loading();
+	void  Login();
+	void  ClearScreen();
+	void Register();
+	void  About();
+	void  Exit();
+	void GetData();
+	void StudentDB(bool isAdmin);
+	void DisplayHeader(std::string prompt);
 
 public:
-	void static Start();
+	void  Start();
 };
